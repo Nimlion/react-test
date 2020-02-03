@@ -1,0 +1,9 @@
+StartScreen
+	text including line & button bottom right
+WhyScreen
+	the entire page
+AboutScreen
+	About component
+	Socials component
+EndScreen
+	EndBlock component

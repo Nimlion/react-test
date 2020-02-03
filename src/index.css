@@ -1,13 +1,257 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+body {
+  overflow-y: hidden;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.coolBackground {
+  background-image: url("/desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.plainBackground {
+  width: 100%;
+  height: 100vh;
+  background: #222;
+  width: 100%;
+  height: 100vh;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.slider {
+  font-family: sans-serif;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+
+section {
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+}
+
+#copyright {
+  font-family: "Reenie Beanie", cursive;
+  text-shadow: 2px 2px 15px black;
+  font-size: 30px;
+  color: white;
+  padding: 0 50px;
+  position: absolute;
+  left: 0px;
+  bottom: 8%;
+}
+
+.btn-next {
+  position: absolute;
+  font-family: "Reenie Beanie", cursive;
+  background-color: #40bfc1;
+  color: black;
+  box-shadow: #40bfc1 5px 5px 2px;
+  text-shadow: black 1px 1px 10px;
+  font-size: 45px;
+  border: none;
+  padding: 3px 75px;
+  border-radius: 15px;
+  cursor: pointer;
+  right: 55px;
+  bottom: 55px;
+  outline: 0;
+}
+
+#intro-block {
+  position: absolute;
+  top: 70vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 75%;
+}
+
+#top-block {
+  position: absolute;
+  top: 5vh;
+}
+
+#bottom-block {
+  position: absolute;
+  bottom: 5vh;
+  width: 100%;
+}
+
+#middle-block {
+  position: absolute;
+  bottom: 25vh;
+  width: 100%;
+}
+
+.head-block {
+  font-family: "Reenie Beanie", cursive;
+  text-shadow: 2px 2px 15px black;
+  font-size: 150px;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.underline:after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  right: 0;
+  top: 165px;
+  left: 0;
+  width: 25%;
+  height: 2px;
+  background-color: white;
+}
+
+.underline-sm:after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  right: 0;
+  top: 75px;
+  left: 0;
+  width: 15%;
+  height: 2px;
+  background-color: white;
+}
+
+.under-block {
+  font-family: "Reenie Beanie", cursive;
+  text-shadow: 2px 2px 15px black;
+  font-size: 72px;
+  color: white;
+}
+
+.under-text {
+  font-family: "Reenie Beanie", cursive;
+  text-shadow: 2px 2px 15px black;
+  font-size: 50px;
+  padding-bottom: 15px;
+  color: white;
+  padding: 0 50px;
+}
+
+.middle-text {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  font-family: "Reenie Beanie", cursive;
+  text-shadow: 2px 2px 15px black;
+  font-size: 60px;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.image-box img {
+  object-fit: contain;
+  object-position: center;
+  height: 115px;
+  width: 115px;
+  margin: 5px 10px;
+}
+
+.logo {
+  position: absolute;
+  bottom: 2%;
+  object-position: center;
+  object-fit: contain;
+}
+
+#middle-block img {
+  object-fit: contain;
+  object-position: center;
+  height: 45px;
+  vertical-align: middle;
+}
+
+#middle-block .under-text {
+  cursor: pointer;
+  width: 35%;
+  margin: auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  #intro-block {
+    top: 60vh;
+  }
+  .head-block {
+    font-size: 69px;
+  }
+  .underline:after {
+    top: 70px;
+  }
+  .underline-sm:after {
+    top: 40px;
+  }
+  .under-block {
+    font-size: 40px;
+  }
+  .btn-next {
+    font-size: 35px;
+    padding: 3px 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #copyright {
+    bottom: 17%;
+  }
+  .middle-text {
+    font-size: 35px;
+  }
+  .under-text {
+    font-size: 28px;
+    text-shadow: 1px 1px 5px black;
+  }
+  #bottom-block {
+    bottom: 15vh;
+  }
+  #middle-block {
+    top: 35vh;
+  }
+  .logo {
+    bottom: 10%;
+  }
+  .image-box img {
+    height: 75px;
+    width: 75px;
+    margin: 5px 10px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 2000px) {
+  .under-text {
+    font-size: 75px;
+    padding: 0 75px;
+  }
 }

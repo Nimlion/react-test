@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+/* All animations */
+.cheese {
+  left: 2%;
+  -webkit-animation-name: turn-left;
+  -webkit-animation-duration: 2s;
+  animation-name: turn-left;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.camel {
+  right: 2%;
+  padding: 10px;
+  -webkit-animation-name: turn-right;
+  -webkit-animation-duration: 4s;
+  animation-name: turn-right;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#middle-block img {
+  -webkit-animation-name: spin; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#intro-block,
+#middle-block,
+#copyright,
+.btn-next {
+  -webkit-animation-name: fade-in; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes turn-left {
+  0%   {transform: rotate(0deg);}
+  25%  {transform: rotate(-15deg);}
+  50%  {transform: rotate(0deg);}
+  75%  {transform: rotate(15deg);}
+  100% {transform: rotate(0deg);}
+}
+
+@keyframes turn-right {
+  0%   {transform: rotate(0deg);}
+  25%  {transform: rotate(15deg);}
+  50%  {transform: rotate(0deg);}
+  75%  {transform: rotate(-15deg);}
+  100% {transform: rotate(0deg);}
 }
